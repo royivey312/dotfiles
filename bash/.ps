@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+function git_thing() {
+  branch="$(git branch 2>/dev/null | grep -e '\* '|sed 's/\* //')"
+  [[ ! -z $branch ]] && echo "  ${branch}"
+}
+
+# PS1
+#roy:~ >  git_branch
+#$ <c>
+PS1='\[\033[01;32m\]\u:\[\033[01;36m\]\w\[\033[01;33m\]$(git_thing)\[\033[0m\]\n$ '
