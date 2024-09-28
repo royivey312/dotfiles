@@ -36,5 +36,5 @@ vim.keymap.set("n", "<leader>e", ":Neotree toggle<cr>")
 vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers right<cr>")
 vim.keymap.set("n", "<leader>s", ":Neotree float git_status<cr>")
 
-vim.keymap.set("n", "<S-w>", ":bp<CR>")
-vim.keymap.set("n", "<S-b>", ":bN<CR>")
+vim.keymap.set("n", "<C-b>h", ":bp<CR>")
+vim.keymap.set("n", "<C-b>l", ":bN<CR>")
