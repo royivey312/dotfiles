@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -70,7 +68,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", opts)
 local tele_status_ok, builtin = pcall(require, "telescope.builtin")
 
 if not tele_status_ok then
-  return
+	return
 end
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
