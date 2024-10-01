@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# enables GNU stow customizations
+#
+# enable by adding the following to the .bashrc of the local home
+#
+# [ -f ~/.bashstow ] && source ~/.bashstow
+#
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+[[ -f ~/.ps ]] && source ~/.ps
