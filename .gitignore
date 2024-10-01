@@ -1,2 +1,2 @@
-# Contains local nvim packages managed by "packer"
-**/plugin
+# lazy package manager lockfile for local installation
+**/lazy-lock.json
