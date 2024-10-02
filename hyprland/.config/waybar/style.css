@@ -1,12 +1,11 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 1px solid cyan;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0px solid cyan;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -37,11 +36,6 @@ button {
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
 }
 
 #workspaces button {
@@ -76,16 +70,8 @@ button:hover {
 #temperature,
 #backlight,
 #network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
 #power-profiles-daemon,
-#keyboard-state,
-#mpd {
+#keyboard-state {
     padding: 5px 10px;
     color: #ffffff;
     border-radius: 10px;
@@ -107,12 +93,7 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #64727D;
-}
-
 #battery {
-    background-color: #ffffff;
     color: #000000;
 }
 
@@ -139,13 +120,11 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
     background-color: #f53c3c;
     color: #ffffff;
+    padding-left: 7px;
+    padding-right: 9px;
 }
 
 #power-profiles-daemon.balanced {
@@ -162,104 +141,33 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
+#backlight,
+#keyboard-state,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature {
+    background: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
 }
 
-#memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
-}
-
-#network {
+#network,
+#power-profiles-daemon {
     background-color: #2980b9;
+    padding-left: 5px;
+    padding-right: 11px;
 }
 
 #network.disconnected {
     background-color: #f53c3c;
 }
 
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#temperature {
-    background-color: #f0932b;
-}
-
 #temperature.critical {
     background-color: #eb4d4b;
 }
 
-#tray {
-    background-color: #2980b9;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
     padding: 0 0px;
     min-width: 16px;
 }
@@ -270,53 +178,4 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}
-
-#backlight-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-#backlight-slider trough {
-    min-height: 80px;
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: black;
-}
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: red;
 }

@@ -6,19 +6,16 @@
     "spacing": 2, // Gaps between modules (px)
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "group/hardware",
         "keyboard-state",
-        "power-profiles-daemon",
-        "battery",
-        "clock",
         "network",
-        "tray",
-        "custom/power"
+        "group/power",
     ],
      "hyprland/workspaces": {
          "disable-scroll": false,
@@ -40,10 +37,6 @@
             "unlocked": ""
         }
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 5
-    },
     "clock": {
         "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -59,6 +52,9 @@
         ],
         "drawer" : {}
     },
+    "backlight": {
+        "format": "{}% "
+    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -70,6 +66,14 @@
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
+    },
+    "group/power": {
+        "orientation": "horizontal",
+        "modules": [
+            "power-profiles-daemon",
+            "battery",
+            "custom/power"
+        ]
     },
     "battery": {
         "states": {
@@ -99,9 +103,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid}  ",
+        "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} via {essid}@{gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}/{signalStrength}%"
