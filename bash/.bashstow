@@ -7,8 +7,5 @@
 # [ -f ~/.bashstow ] && source ~/.bashstow
 #
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-[[ -f ~/.ps ]] && source ~/.ps
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+[ -f ~/.ps ] && source ~/.ps
