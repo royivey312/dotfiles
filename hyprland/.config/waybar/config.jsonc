@@ -21,11 +21,12 @@
          "disable-scroll": false,
          "all-outputs": true,
          "warp-on-scroll": false,
-         "format": "{name}: {icon}",
+         "format-window-seperator": "",
+         "format": "{icon}",
          "format-icons": {
              "urgent": "",
-             "active": "",
-             "default": ""
+             "active": "󰛐",
+             "default": "󰧟"
          }
      },
     "keyboard-state": {
@@ -111,15 +112,15 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}/{signalStrength}%"
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "format" : "⏻",
+	"tooltip": false,
+	"menu": "on-click",
+	"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+	"menu-actions": {
+		"shutdown": "shutdown",
+		"reboot": "reboot",
+		"suspend": "systemctl suspend",
+		"hibernate": "systemctl hibernate"
+	}
     }
 }
