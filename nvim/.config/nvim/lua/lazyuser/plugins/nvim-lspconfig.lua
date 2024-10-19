@@ -198,7 +198,6 @@ return {
 			"xmlformatter", -- XML Formatter
 			"sonarlint-language-server", -- General Linting
 			"jdtls", -- Java LSP
-			"checkstyle", -- Java checkstyle
 			"google-java-format", -- Google Java Formatter
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
