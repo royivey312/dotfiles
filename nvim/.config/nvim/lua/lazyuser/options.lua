@@ -64,4 +64,7 @@ vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2 -- insert 2 spaces for each tab
 
+vim.opt.wrap = false
+vim.opt.colorcolumn = "100"
+
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
